@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Random Colors Generator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="color">
+		<span id="hex">#e74c3</span>
+		<button onclick="getNewColor()">Get New Color</button>
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+		
+		function getNewColor() {
+			var symbols, color;
+			symbols = "0123456789ABCDEF";
+
+			color ="#";
+			for (var i = 0; i < 6; i++){
+				color = color + symbols[Math.floor(Math.random()*16)]
+			}
+			document.body.style.background = color;
+			document.getElementById("hex").innerHTML = color;
+
+		}
+</script>
